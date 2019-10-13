@@ -44,8 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Car.cs" />
+    <Compile Include="Classes\Combustion\CombustionCarFactory.cs" />
+    <Compile Include="Classes\Combustion\CombustionEngine.cs" />
+    <Compile Include="Classes\Combustion\GasTank.cs" />
+    <Compile Include="Classes\Electric\ElectricCarFactory.cs" />
+    <Compile Include="Classes\Electric\ElectricBattery.cs" />
+    <Compile Include="Classes\Electric\ElectricEngine.cs" />
     <Compile Include="Classes\Engine.cs" />
     <Compile Include="Classes\FuelStorage.cs" />
+    <Compile Include="Classes\ICarFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

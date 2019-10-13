@@ -3,7 +3,7 @@ using System.Timers;
 
 namespace AbstractFactory_Cars_Demo.Classes
 {
-    public class FuelStorage
+    public abstract class FuelStorage
     {
         private Timer _fillStorageTimer;
 
@@ -53,9 +53,6 @@ namespace AbstractFactory_Cars_Demo.Classes
             }
         }
 
-        private double GetUnitsToFillInHalfASecond()
-        {
-            return 1;
-        }
+        protected abstract double GetUnitsToFillInHalfASecond();
     }
 }

@@ -9,11 +9,11 @@ namespace TemplateMethod_Museum_Demo
         {
             Museum museum = new Museum();
 
-            museum.Visit(new Person("Mehmet Sultanul", 4));
-            museum.Visit(new Person("Cristina Pop", 6));
-            museum.Visit(new Person("Rafael Popescu", 20));
-            museum.Visit(new Person("Nadia Comanici", 33));
-            museum.Visit(new Person("Mihai Lungu", 83));
+            museum.Visit(new Child("Mehmet Sultanul", 4));
+            museum.Visit(new Child("Cristina Pop", 6));
+            museum.Visit(new Adult("Rafael Popescu", 20));
+            museum.Visit(new Adult("Nadia Comanici", 33));
+            museum.Visit(new Senior("Mihai Lungu", 83));
 
             Console.WriteLine($"The museum's income from tickets: {museum.IncomeFromTickets}");
         }

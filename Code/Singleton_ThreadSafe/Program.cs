@@ -44,27 +44,27 @@ namespace Singleton_ThreadSafe
         }
 
 
-        private static void DoWork_ThreadSafeSingletonOptimized(object parameter)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                ThreadSafeSingletonOptimized.GetInstance().AddMessage($"Thread {parameter}: {i}");
-            }
-        }
+        //private static void DoWork_ThreadSafeSingletonOptimized(object parameter)
+        //{
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        ThreadSafeSingletonOptimized.GetInstance().AddMessage($"Thread {parameter}: {i}");
+        //    }
+        //}
 
-        private static void ThreadSafeSingletonOptimizedSample()
-        {
-            var t1 = new Thread(DoWork_ThreadSafeSingletonOptimized);
-            var t2 = new Thread(DoWork_ThreadSafeSingletonOptimized);
-            t1.Start(1);
-            t2.Start(2);
-        }
+        //private static void ThreadSafeSingletonOptimizedSample()
+        //{
+        //    var t1 = new Thread(DoWork_ThreadSafeSingletonOptimized);
+        //    var t2 = new Thread(DoWork_ThreadSafeSingletonOptimized);
+        //    t1.Start(1);
+        //    t2.Start(2);
+        //}
 
         static void Main(string[] args)
         {
             NotThreadSafeSingletonSample();
-            ThreadSafeSingletonWithLockSample();
-            ThreadSafeSingletonOptimizedSample();
+            //ThreadSafeSingletonWithLockSample();
+           // ThreadSafeSingletonOptimizedSample();
         }
     }
 }

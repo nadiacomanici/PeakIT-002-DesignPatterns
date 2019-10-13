@@ -1,5 +1,7 @@
 ﻿using System.Threading;
 using AbstractFactory_Cars_Demo.Classes;
+using AbstractFactory_Cars_Demo.Classes.Combustion;
+using AbstractFactory_Cars_Demo.Classes.Electric;
 
 namespace AbstractFactory_Cars_Demo
 {
@@ -7,7 +9,8 @@ namespace AbstractFactory_Cars_Demo
     {
         static void Main(string[] args)
         {
-            var car = new Car(new Engine(), new FuelStorage(10, 8, "liters"));
+            //var car = new Car(new CombustionCarFactory(10, 8, "liters"));
+            var car = new Car(new ElectricCarFactory(20, 8, "KW"));
 
             // Start the car and let it accelerate and move until it runs out of fuel
             car.TurnOn();

@@ -22,10 +22,10 @@ namespace AbstractFactory_Cars_Demo.Classes
             get { return _fuelStorage.IsFilling; }
         }
 
-        public Car(Engine engine, FuelStorage fuelStorage)
+        public Car(ICarFactory carFactory)
         {
-            _engine = engine;
-            _fuelStorage = fuelStorage;
+            _engine = carFactory.CreateEngine();
+            _fuelStorage = carFactory.CreateFuelStorage();
 
             _fuelComsumptionTimer = new Timer(500);
             _fuelComsumptionTimer.Elapsed += FuelComsumptionTimer_Elapsed;

@@ -18,26 +18,7 @@ namespace Strategy_Museum_Demo.Logic
         public void Visit(Person person)
         {
             _visitors.Add(person);
-
-            // All children under 7 years have free entry
-            // All senior citizens (> 65 years) have 50% reduced ticket
-            double ticketPrice = 0;
-            if (person.Age < 7)
-            {
-                ticketPrice = 0;
-            }
-            else
-            {
-                if (person.Age > 65)
-                {
-                    ticketPrice = _fullTicketPrice / 2;
-                }
-                else
-                {
-                    ticketPrice = _fullTicketPrice;
-                }
-            }
-            IncomeFromTickets += ticketPrice;
+            IncomeFromTickets += _fullTicketPrice * person.TicketMultiplier;
         }
     }
 }
